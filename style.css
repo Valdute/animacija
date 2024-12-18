@@ -1,0 +1,84 @@
+.animated-list {
+    list-style: none;
+    padding: 0;
+    width: 50%;
+  }
+  
+  .animated-list li {
+    position: relative;
+    overflow: hidden;
+    margin: 10px;
+    padding: 15px;
+    background: linear-gradient(45deg, #f06292, #c70039);
+    color: white;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transition: all 0.3s ease-in-out;
+    border-radius: 10px;
+  }
+  
+  .animated-list li:hover {
+    transform: scale(1.1);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+  }
+  
+  /* Svyruojanti animacija */
+  .animated-list li {
+    animation: wiggle 1s infinite alternate;
+  }
+  @keyframes wiggle {
+    0% {
+      transform: translateY(0);
+    }
+    50% {
+      transform: translateY(-5px);
+    }
+    100% {
+      transform: translateY(0);
+    }
+  }
+  
+  /* Besisukanti ikona */
+  .animated-list li::before {
+    content: "\f00c"; /* Font Awesome check mark icon */
+    font-family: "Font Awesome 5 Free";
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    font-size: 24px;
+    color: white;
+    animation: rotate 2s infinite linear;
+  }
+  @keyframes rotate {
+    100% {
+      transform: rotate(360deg);
+    }
+  }
+
+  .animated-list {
+    list-style: none;
+    padding: 0;
+  }
+  
+  .animated-list li {
+    position: relative;
+    overflow: hidden;
+    margin: 10px;
+    padding: 15px;
+    background: linear-gradient(45deg, #f06292, #c70039);
+    color: white;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transition: all 0.3s ease-in-out;
+    border-radius: 10px;
+  }
+  
+  /* Naujas stilius hover efektui */
+  .animated-list li:hover {
+    background: linear-gradient(45deg, #007bff, #663399); /* Pakeiskite spalvas pagal pageidavimą */
+    transform: scale(1.1);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+  }
+
+  /* Kiekvienas sąrašo elementas turi gradientinį foną, šešėlį ir apvalius kampus. */
+  /* Užvedus pelę ant elemento, jis šiek tiek padidėja ir šešėlis tampa ryškesnis.  */
+  /* elementai svyruoja uakštyn žemyn */
+  /* Kiekvieno elemento viršutiniame dešiniajame kampe yra besisukanti ikona (čia naudojamas Font Awesome, bet galima naudoti bet kokį kitą ikonų rinkinį). */
